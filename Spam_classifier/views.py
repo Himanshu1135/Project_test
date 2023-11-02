@@ -3,6 +3,10 @@ from .sms_spam_main import sms_spam_predict,SpamModel,Vectorizer
 from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
+
+def home(request):
+    return render(request,'home.html')
+
 @csrf_exempt
 def spam_classifier(request):
     if request.method == "POST":
